@@ -22,6 +22,11 @@ type FrameSize struct {
 	StepHeight uint32
 }
 
+// Implements Stringer interface.
+func (s FrameSize) String() string {
+	return s.GetString()
+}
+
 // Returns string representation of frame size, e.g.
 // 1280x720 for fixed-size frames and
 // [320-640;160]x[240-480;160] for stepwise-sized frames
